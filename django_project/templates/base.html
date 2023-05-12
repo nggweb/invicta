@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.3.4/masonry.min.css" integrity="sha512-GvA0K0D7CcGCHGk9m9wAC7sdQ9Dk+QjX+WUthW8+SCJL1+mgazGQ3sl0r+Z3ktcypor8XzM6hQdZPd+P9VYYbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- This file stores project-specific CSS -->
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
     {% endblock %}
     <!-- Le javascript
     ================================================== -->
@@ -37,9 +38,14 @@
   </head>
 
   <body>
-
+    <style>
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
     <div class="mb-1">
-      <nav class="navbar navbar-expand-lg navbar-lightdark bg-dark py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container-fluid">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -108,7 +114,7 @@
                             Start The Enrollment
                         </button>
                     </div>
-                    <img class="img-fluid w-50 p-5 d-none d-sm-block" src="img/showcase.svg" alt="" />
+                    <img class="img-fluid w-50 p-5 d-none d-sm-block" src="{% static 'img/showcase.svg' %}" alt="" />
                 </div>
             </div>
         </section>
@@ -184,7 +190,7 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md">
-                        <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+                        <img src="{% static  'img/fundamentals.svg' %}" class="img-fluid" alt="" />
                     </div>
                     <div class="col-md p-5">
                         <h2>Learn the Fundamentals</h2>
@@ -220,7 +226,7 @@
                         </a>
                     </div>
                     <div class="col-md">
-                        <img src="img/react.svg" class="img-fluid" alt="" />
+                        <img src="{% static 'img/react.svg' %}" class="img-fluid" alt="" />
                     </div>
                 </div>
             </div>
